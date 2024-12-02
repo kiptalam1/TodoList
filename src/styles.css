@@ -27,10 +27,20 @@ body {
     min-height: 600px;
     border-radius: 20px;
 }
+.tasks-container h2 {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.tasks-container img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
 input {
-    /* display: block; */
+    background-color: #71717a;
     color: var(--font-color);
-    /* font-size: 1.25rem; */
 
 }
 #title {
@@ -39,7 +49,7 @@ input {
     width: 555px;
     border-radius: 10px;
     outline: none;
-    background-color: #71717a;
+
 
 }
 .tasks-container label {
@@ -47,18 +57,65 @@ input {
     font-size: 1.25rem;
 }
 #due-date {
-    padding: 10px;
+    padding: 5px;
     width: 425px;
     border-radius: 10px;
     outline: none;
-    background-color: #71717a;
+}
+.tasks-container div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.tasks-container button {
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    margin: 20px 40px 20px ;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: #ff5945;
+    color: var(--font-color);
 }
 
-#list-container li {
+ul li {
     list-style: none;
-    margin: 20px 30px;
+    padding: 12px 8px 12px 80px;
     font-size: 1rem;
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    background-image: url(./Assets/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 30px;
+    top: 12px;
+    border-radius: 50px;
+}
+ul li.checked {
+    text-decoration: line-through;
+    color: #4ade80;
+}
+ul li.checked::before {
+    background-image: url(./Assets/checked.png);
+}
+
+ul li::after {
+    content: '';
+    background-size: cover;
+    background-position: center;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    border-radius: 50px;
+    background-image: url(./Assets/cancel.png);
+    right: 30px;
+    top: 12px;
 }
