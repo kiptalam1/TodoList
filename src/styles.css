@@ -1,0 +1,64 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+
+}
+:root {
+    --font-color: #fafafa;
+}
+body {
+    color: var(--font-color)
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#6366f1, #2563eb, #1d4ed8, #172554, #4338ca, #1e1b4b);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.tasks-container, .descriptions-container {
+    background-color: #27272a;
+    width: 40%;
+    min-height: 600px;
+    border-radius: 20px;
+}
+input {
+    /* display: block; */
+    color: var(--font-color);
+    /* font-size: 1.25rem; */
+
+}
+#title {
+    margin: 20px 30px;
+    padding: 10px;
+    width: 555px;
+    border-radius: 10px;
+    outline: none;
+    background-color: #71717a;
+
+}
+.tasks-container label {
+    margin: 20px 30px;
+    font-size: 1.25rem;
+}
+#due-date {
+    padding: 10px;
+    width: 425px;
+    border-radius: 10px;
+    outline: none;
+    background-color: #71717a;
+}
+
+#list-container li {
+    list-style: none;
+    margin: 20px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
