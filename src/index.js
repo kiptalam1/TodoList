@@ -1,5 +1,5 @@
 import "./styles.css";
 import { unchecked } from "./Assets/unchecked.png";
-import { updateTaskDisplay } from "./taskInput.js";
+import { TaskManager } from "./taskInput.js";
 
 // getInput();
