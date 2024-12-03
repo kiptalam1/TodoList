@@ -28,6 +28,45 @@ body {
     opacity: .9;
     align-self: flex-start;
 }
+.sidebar h2 {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 1.5rem;
+}
+.sidebar img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+.sidebar h4 {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+.sidebar h4 img {
+    width: 30px;
+    height: 30px;
+    margin-right:20px;
+
+}
+.sidebar .projects {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+.sidebar .projects h4 {
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+.sidebar .projects h4 img{
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
 .tasks-container {
     background-color: #27272a;
     width: 77.5%;
@@ -35,19 +74,6 @@ body {
     border-radius: 20px 20px 0 0;
     margin-top: 20px;
 }
-.tasks-container h2 {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 30px;
-}
-.tasks-container img {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-}
-
-
 
 ul li {
     list-style: none;
