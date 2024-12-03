@@ -10,11 +10,10 @@
 </head>
 <body>
     
-
     <!-- Modal (Initially hidden) -->
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span id="closeModalBtn" class="close">&times;</span>
+            <span id="close-modal-btn" class="close">&times;</span>
             <h2>Task Input</h2>
             <form id="taskForm">
                 <label for="title">Title:</label>
@@ -26,9 +25,9 @@
                 <label for="dueDate">Due Date:</label>
                 <input type="date" id="dueDate">
 
-                <label for="important">Important:</label>
-                <input type="checkbox" id="important">
-
+                <label for="important" class="important-label">Important:
+                <input type="checkbox" id="important" class="important-checkbox">
+                </label>
                 <button type="submit">Add Task</button>
             </form>
         </div>
@@ -46,7 +45,7 @@
         </div>
     </div>
         <div class="tasks-container">
-        <button type="button" id="openModalBtn"><img src="./Assets/add-icon.png" alt=""></button>
+        <button type="button" id="open-modal-btn"><img src="./Assets/add-icon.png" alt=""></button>
 
             <ul id="list-container">
                 
