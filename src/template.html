@@ -15,7 +15,7 @@
         <div class="modal-content">
             <span id="close-modal-btn" class="close">&times;</span>
             <h2>Task Input</h2>
-            <form id="taskForm">
+            <form id="task-form">
                 <label for="title">Title:</label>
                 <input type="text" id="title" required>
 
@@ -28,7 +28,7 @@
                 <label for="important" class="important-label">Important:
                 <input type="checkbox" id="important" class="important-checkbox">
                 </label>
-                <button type="submit">Add Task</button>
+                <button type="submit" id="submit-modal-btn">Add Task</button>
             </form>
         </div>
     </div>
@@ -47,9 +47,9 @@
         <div class="tasks-container">
         <button type="button" id="open-modal-btn"><img src="./Assets/add-icon.png" alt=""></button>
 
-            <ul id="list-container">
+            <div class="tasks-div">
                 
-            </ul>
+            </div>
         </div>
     </div>
 </body>
