@@ -8,6 +8,8 @@ export const DisplayTask = (() => {
         // get the container that holds all tasks.
         const tasksDiv = document.querySelector('.tasks-div');
         // create elements for all the fields
+        const contDiv = document.createElement('div');
+        contDiv.className = 'cont-div';
         const titleText = document.createElement('h4');
         const descriptionText = document.createElement('p');
         const dateText = document.createElement('p');
@@ -18,7 +20,8 @@ export const DisplayTask = (() => {
         dateText.textContent = date;
         importantText.textContent = important ? "Important" : "";
         // add elements to the container
-        tasksDiv.append(titleText, descriptionText, dateText, importantText);
+        contDiv.append(titleText, descriptionText, dateText, importantText);
+        tasksDiv.appendChild(contDiv);
     };
     return {
         renderTask,
