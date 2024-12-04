@@ -1,5 +1,6 @@
 import { DisplayTask } from "./taskDisplay.js";
 import { ModalManager } from "./modal.js";
+import { StorageManager } from "./taskStorage.js";
 
 export const TaskManager = (() => {
     const taskForm = document.getElementById('task-form');
@@ -15,24 +16,32 @@ export const TaskManager = (() => {
             description: taskDescription.value,
             date: taskDueDate.value,
             important: taskImportant.checked, 
+            completed: false,
         };
     };
  // Handle form submission
     const handleFormSubmit = (event) => {
-        event.preventDefault(); // Prevent form default submission behavior
+        event.preventDefault(); 
+
         const task = getInputTask();
+
         if (!task.title.trim()) {
             alert("Task title is required!");
             return;
         }
+        // save task using storageManager.
+        StorageManager.addTask(task);
         // Call renderTask from DisplayTask to display the new task
-        DisplayTask.renderTask();
+        DisplayTask.renderAllTasks('all');
+
         taskForm.reset(); // Clear the form after submission
+
         ModalManager.closeModal();
     };
 
     // Add event listener for form submission
     taskForm.addEventListener('submit', handleFormSubmit);
+    addTaskButton.addEventListener('click', handleFormSubmit);
 
     return {
         getInputTask,
